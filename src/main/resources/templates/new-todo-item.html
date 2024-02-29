@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo Application</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-2">
+                <p>
+                    <a href="/">
+                        Back
+                    </a>
+                </p>
+            </div>
+            <div class="col-6">
+                <h2>Add a new Todo item</h2>
+                <form action="#" th:action="@{/todo}" th:object="${todoitems}" method="POST">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" th:field="*{description}" id="description" placeholder="Description">
+                        <button type="submit">
+                            <i class="bi bi-plus-square-fill"></i> Add Todo
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
